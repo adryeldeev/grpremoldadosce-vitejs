@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <>
     <section 
-      className='relative h-[800px] rounded-lg flex items-center px-12 mt-8'
+      className='relative h-[750px] flex items-center px-12'
       style={{
         backgroundImage: `url(${imgHero})`,
         backgroundSize: 'cover',
@@ -25,7 +25,7 @@ const Hero = () => {
         </div>
     </section>
 
-    <section className='flex flex-col md:flex-row md:justify-between items-start mt-16 gap-8'>
+    <section className='flex flex-col md:flex-row md:justify-between items-start mt-4 gap-8 px-12  mx-auto'>
         <div>
             <h2 className='text-2xl  md:text-4xl font-bold' style={{color: '#1E40AF'}}>15+</h2>
             <p className='text-gray-600'>Anos de Experiência</p>

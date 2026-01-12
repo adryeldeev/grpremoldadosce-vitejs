@@ -8,7 +8,7 @@ const Header = () => {
   };
 
   return (
-    <nav className='flex justify-between items-center relative'>
+    <nav className='flex justify-between items-center relative p-4 md:p-4'>
         <img src={logo} alt="Logo" className='h-16' />
        
        {/* Desktop Menu */}
