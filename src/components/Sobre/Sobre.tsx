@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Sobre = () => {
   return (
     <section className='mt-32 px-12 ' id='sobre'>

@@ -1,4 +1,3 @@
-import React from 'react'
 import bloco from '../../assets/blocoConcreto.png';
 import paver from '../../assets/paver.png';
 import canaleta from '../../assets/caneletas.png';

@@ -1,4 +1,3 @@
-import React from 'react'
 import { Award, Shield, Truck, Users, Clock, ThumbsUp } from 'lucide-react'
 
 const PQEscolherGR = () => {

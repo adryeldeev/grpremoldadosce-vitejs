@@ -1,4 +1,3 @@
-import React from 'react'
 import { Factory, Home, Building2, Construction } from 'lucide-react'
 import residencial from '../../assets/residencial.jpg';
 import infraestrutura from '../../assets/infraestrutura.jpg';
