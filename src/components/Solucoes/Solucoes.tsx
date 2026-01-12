@@ -1,3 +1,4 @@
+import React from 'react'
 import { Factory, Home, Building2, Construction } from 'lucide-react'
 import residencial from '../../assets/residencial.jpg';
 import infraestrutura from '../../assets/infraestrutura.jpg';
@@ -40,7 +41,7 @@ const Solucoes = () => {
     <section className='py-16 px-4 bg-white' id='solucoes'>
       <div className='text-center mb-12'>
         <h2 className='text-4xl font-bold mb-4'>
-          Soluções para <span style={{color: '#1E40AF'}}>Sua Obra</span>
+          Soluções para <span style={{color: '#1E40AF'}}><br className='block md:hidden'/>Sua Obra</span>
         </h2>
         <p className='text-gray-600 max-w-3xl mx-auto'>
           Atendemos diversos segmentos da construção civil

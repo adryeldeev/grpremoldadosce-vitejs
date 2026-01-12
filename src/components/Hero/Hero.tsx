@@ -24,7 +24,7 @@ const Hero = () => {
         </div>
     </section>
 
-    <section className='flex flex-col md:flex-row md:justify-between items-start mt-4 gap-8 px-12  mx-auto'>
+    <section className='flex flex-col md:flex-row md:justify-between items-start  gap-8 px-12  mx-auto bg-[#F9FAFB] py-8 rounded-lg  '>
         <div>
             <h2 className='text-2xl  md:text-4xl font-bold' style={{color: '#1E40AF'}}>15+</h2>
             <p className='text-gray-600'>Anos de Experiência</p>
