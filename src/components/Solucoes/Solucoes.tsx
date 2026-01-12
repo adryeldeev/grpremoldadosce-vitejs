@@ -11,7 +11,7 @@ const Solucoes = () => {
       title: 'Soluções Industriais',
       description: 'Produtos para construções industriais com alta resistência e durabilidade.',
       Icon: Factory,
-      image: industrial,
+      image: industrial
     },
     {
       id: 2,
