@@ -10,7 +10,7 @@ const Produtos = () => {
       name: 'Blocos de Concreto',
       description: 'Blocos estruturais e de vedação em diversas medidas. Alta resistência e durabilidade para sua obra.',
       image: bloco,
-      sizes: ['9x19x39cm', '14x19x39cm', '19x19x39cm'],
+      sizes: ['9x19x39cm', '14x19x39cm'],
       whatsappMessage: 'Olá, estou interessado em Blocos de Concreto. Gostaria de mais informações.',
     },
     {

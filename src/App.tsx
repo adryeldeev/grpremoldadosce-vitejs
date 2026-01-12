@@ -4,6 +4,9 @@ import Sobre from "./components/Sobre/Sobre"
 import PQEscolherGR from "./components/PQEscolherGR/PQEscolherGR"
 import Produtos from "./components/Produtos/Produtos"
 import Solucoes from "./components/Solucoes/Solucoes"
+import Depoimentos from "./components/Depoimentos/Depoimentos"
+import Cta from "./components/Cta/Cta"
+import Footer from "./components/Footer/Footer"
 
 function App() {
 
@@ -15,6 +18,9 @@ function App() {
      <PQEscolherGR/>
      <Produtos/>
      <Solucoes/>
+     <Depoimentos/>
+     <Cta/>
+     <Footer/>
     </div>
   )
 }

@@ -3,7 +3,7 @@ const Hero = () => {
   return (
     <>
     <section 
-      className='relative h-[750px] flex items-center px-12'
+      className='relative h-[750px] flex items-center px-12 animate-on-scroll' id='inicio'
       style={{
         backgroundImage: `url(${imgHero})`,
         backgroundSize: 'cover',
@@ -11,7 +11,7 @@ const Hero = () => {
         backgroundRepeat: 'no-repeat',
       }}
     >
-        <div className='max-w-xl'>
+        <div className='max-w-xl '>
             <h1 className='text-2xl md:text-5xl font-bold mb-6 text-white'>
               Materiais de Construção de <span style={{color: '#1E40AF', textShadow: '0 4px 12px rgba(0, 0, 0, 0.2), 0 2px 6px rgba(0, 0, 0, 0.2)'}}>Alta Qualidade</span>
             </h1>
