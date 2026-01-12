@@ -1,4 +1,5 @@
-import { MapPin, Phone, Mail, Facebook, Instagram, Linkedin } from 'lucide-react'
+import { MapPin, Phone, Mail } from 'lucide-react'
+import { FaFacebook, FaInstagram } from 'react-icons/fa'
 import logo from '../../assets/logoGR.png'
 
 const Footer = () => {
@@ -62,15 +63,13 @@ const Footer = () => {
             <div className='mt-6'>
               <h4 className='font-semibold mb-3'>Redes Sociais</h4>
               <div className='flex gap-3'>
-                <a href='#' className='w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all'>
-                  <Facebook size={20} />
+                <a href='#' className='w-10 h-10  bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all'>
+                  <FaFacebook size={20} className='text-white' />
                 </a>
-                <a href='#' className='w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all'>
-                  <Instagram size={20} />
+                <a href='#' className='w-10 h-10  bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all'>
+                  <FaInstagram size={20} className='text-white' />
                 </a>
-                <a href='#' className='w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all'>
-                  <Linkedin size={20} />
-                </a>
+               
               </div>
             </div>
           </div>
