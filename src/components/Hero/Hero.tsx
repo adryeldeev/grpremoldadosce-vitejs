@@ -20,7 +20,7 @@ const Hero = () => {
     >
         <div className='max-w-xl text-center'>
             <h1 className='text-2xl md:text-5xl font-bold mb-6 text-white'>
-              Materiais de Construção de <span style={{color: '#1E40AF', textShadow: '0 4px 12px rgba(0, 0, 0, 0.2), 0 2px 6px rgba(0, 0, 0, 0.2)'}}>Alta Qualidade</span>
+              Materiais de Construção de <span className='bg-gradient-to-r from-blue-900 via-blue-700 to-blue-600 text-transparent bg-clip-text drop-shadow-[0_0_15px_rgba(59,130,246,0.5)]'>Alta Qualidade</span>
             </h1>
             <p className='text-white mb-4 md:mb-6 md:text-lg'>
               Blocos, canaletas e pré-moldados para sua obra com excelência e durabilidade.
