@@ -55,16 +55,16 @@ const Solucoes = () => {
               key={solution.id}
               className='group cursor-pointer'
             >
-              <div className='relative h-64 rounded-3xl overflow-hidden mb-6 bg-gray-200'>
+              <div className='relative h-64 rounded-3xl overflow-hidden mb-6 bg-gray-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300'>
                 <img 
                   src={solution.image} 
                   alt={solution.title}
-                  className='absolute inset-0 w-full h-full object-cover'
+                  className='absolute inset-0 w-full h-full object-cover '
                 />
                 <div className='absolute inset-0 flex items-center justify-center z-10'>
                   <div className='w-32 h-32 rounded-full  flex items-center justify-center'>
                     <div className='w-20 h-20 rounded-2xl flex items-center justify-center' style={{backgroundColor: '#1E40AF'}}>
-                      <Icon className='text-white' size={40} />
+                      <Icon className='text-white ' size={40} />
                     </div>
                   </div>
                 </div>

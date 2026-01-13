@@ -1,5 +1,5 @@
 import { CheckCircle2, MessageCircle } from 'lucide-react'
-import ctaImage from '../../assets/fotoHero-GRPremoldados.png'
+import cta from '../../assets/ctaGRPreMoldados.jpg'
 
 const Cta = () => {
   const benefits = [
@@ -23,9 +23,9 @@ const Cta = () => {
           {/* Imagem */}
           <div className='h-full'>
             <img 
-              src={ctaImage} 
+              src={cta} 
               alt="Contato GR Pré Moldados"
-              className='w-full h-full object-cover min-h-[400px]'
+              className='w-full h-full object-cover min-h-[200px] object-[30%_center] lg:object-center'
             />
           </div>
 
@@ -49,7 +49,7 @@ const Cta = () => {
 
             <button
               onClick={handleWhatsAppClick}
-              className='w-full py-3 md:py-4 px-4 md:px-8 text-white rounded-lg font-semibold flex items-center justify-center gap-2 md:gap-3 hover:opacity-90 transition-opacity text-base md:text-lg'
+              className='w-full py-3 md:py-4 px-4 md:px-8 text-white rounded-lg font-semibold flex items-center justify-center gap-2 md:gap-3 hover:opacity-90 transition-opacity text-base md:text-lg  hover:-translate-y-1 hover:shadow-lg transition-all duration-300 cursor-pointer'
               style={{backgroundColor: '#25D366'}}
             >
               <MessageCircle className='flex-shrink-0' size={20} />

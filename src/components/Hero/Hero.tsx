@@ -1,9 +1,16 @@
-import imgHero from '../../assets/fotoHero-GRPremoldados.png';
+import imgHero from '../../assets/unsplash_lY_1_64r5Bo.png';
 const Hero = () => {
+  const numberWhatsapp = '5585999289524'; // Substitua pelo número de WhatsApp desejado
+
+  const handleWhatsAppClick = () => {
+    const message = 'Olá! Gostaria de solicitar um orçamento.'
+    const encodedMessage = encodeURIComponent(message)
+    window.open(`https://wa.me/${numberWhatsapp}?text=${encodedMessage}`, '_blank')
+  };
   return (
     <>
     <section 
-      className='relative h-[750px] flex items-center px-12 animate-on-scroll' id='inicio'
+      className='relative h-[550px] flex items-center justify-center px-12 animate-on-scroll' id='inicio'
       style={{
         backgroundImage: `url(${imgHero})`,
         backgroundSize: 'cover',
@@ -11,14 +18,14 @@ const Hero = () => {
         backgroundRepeat: 'no-repeat',
       }}
     >
-        <div className='max-w-xl '>
+        <div className='max-w-xl text-center'>
             <h1 className='text-2xl md:text-5xl font-bold mb-6 text-white'>
               Materiais de Construção de <span style={{color: '#1E40AF', textShadow: '0 4px 12px rgba(0, 0, 0, 0.2), 0 2px 6px rgba(0, 0, 0, 0.2)'}}>Alta Qualidade</span>
             </h1>
             <p className='text-white mb-4 md:mb-6 md:text-lg'>
               Blocos, canaletas e pré-moldados para sua obra com excelência e durabilidade.
             </p>
-            <button className='py-4 px-8 text-white rounded-lg cursor-pointer flex items-center gap-2' style={{backgroundColor: '#1E40AF'}}>
+            <button onClick={handleWhatsAppClick} className='py-4 px-8 text-white rounded-lg cursor-pointer hover:-translate-y-1 hover:shadow-lg transition-all duration-300 flex items-center gap-2 mx-auto' style={{backgroundColor: '#1E40AF'}}>
               Solicitar Orçamento →
             </button>
         </div>

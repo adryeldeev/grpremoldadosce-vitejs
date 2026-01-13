@@ -2,6 +2,7 @@ import { useState } from 'react';
 import logo from '../../assets/logoGR.png'
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+ 
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
@@ -15,13 +16,12 @@ const Header = () => {
        <ul className='hidden md:flex justify-between w-2/5 items-center'>
         <li><a href="#inicio" className='hover:text-[#1E40AF]'>Início</a></li>
         <li><a href="#sobre" className='hover:text-[#1E40AF]'>Sobre</a></li>
-        <li><a href="#depoimentos" className='hover:text-[#1E40AF]'>Depoimentos</a></li>
         <li><a href="#produtos" className='hover:text-[#1E40AF]'>Produtos</a></li>
+        <li><a href="#depoimentos" className='hover:text-[#1E40AF]'>Depoimento</a></li>
         <li><a href="#contato" className='hover:text-[#1E40AF]'>Contato</a></li>
        </ul>
-       
-       <button className='hidden md:block py-4 px-8 text-white rounded-lg hover:bg-secondary cursor-pointer' style={{backgroundColor: '#1E40AF'}}>Orçamento</button>
-       
+       <button className='hidden md:block py-4 px-8 text-white rounded-lg cursor-pointer' style={{backgroundColor: '#1E40AF'}}><a href="#contato">
+        Orçamento</a></button>
        {/* Mobile Menu Button */}
        <button 
          className='md:hidden text-3xl cursor-pointer' 

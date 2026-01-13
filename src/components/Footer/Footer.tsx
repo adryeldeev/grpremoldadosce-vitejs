@@ -1,5 +1,5 @@
 import { MapPin, Phone, Mail } from 'lucide-react'
-import { FaFacebook, FaInstagram } from 'react-icons/fa'
+import { FaInstagram } from 'react-icons/fa'
 import logo from '../../assets/logoGR.png'
 
 const Footer = () => {
@@ -51,11 +51,11 @@ const Footer = () => {
               </li>
               <li className='flex items-center gap-2'>
                 <Phone className='flex-shrink-0' size={18} />
-                <a href='tel:+5585999999999' className='text-sm hover:text-gray-200 transition-colors'>(85) 99999-9999</a>
+                <a href='tel:+5585999289524' className='text-sm hover:text-gray-200 transition-colors'>(85) 99289-5924</a>
               </li>
               <li className='flex items-center gap-2'>
                 <Mail className='flex-shrink-0' size={18} />
-                <a href='mailto:contato@grpremoldados.com.br' className='text-sm hover:text-gray-200 transition-colors'>contato@grpremoldados.com.br</a>
+                <a href='mailto:grpremoldadosce@gmail.com' className='text-sm hover:text-gray-200 transition-colors'>grpremoldadosce@gmail.com</a>
               </li>
             </ul>
 
@@ -63,10 +63,8 @@ const Footer = () => {
             <div className='mt-6'>
               <h4 className='font-semibold mb-3'>Redes Sociais</h4>
               <div className='flex gap-3'>
-                <a href='#' className='w-10 h-10  bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all'>
-                  <FaFacebook size={20} className='text-white' />
-                </a>
-                <a href='#' className='w-10 h-10  bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all'>
+               
+                <a href='https://www.instagram.com/grpremoldadosce/' className='w-10 h-10  bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all'>
                   <FaInstagram size={20} className='text-white' />
                 </a>
                

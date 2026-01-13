@@ -57,13 +57,13 @@ const PQEscolherGR = () => {
           return (
             <div 
               key={reason.id}
-              className='bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300'
+              className='bg-white p-8 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col items-center text-center'
             >
-              <div className='w-16 h-16 mb-4 rounded-2xl flex items-center justify-center' style={{backgroundColor: '#1E40AF'}}>
+              <div className='w-16 h-16 mb-4 rounded-2xl flex items-center justify-center mx-auto' style={{backgroundColor: '#1E40AF'}}>
                 <Icon className='text-white' size={32} />
               </div>
-              <h3 className='text-xl font-bold mb-3'>{reason.title}</h3>
-              <p className='text-gray-600'>{reason.description}</p>
+              <h3 className='text-xl font-bold mb-3 text-center'>{reason.title}</h3>
+              <p className='text-gray-600 text-center'>{reason.description}</p>
             </div>
           )
         })}

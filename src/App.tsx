@@ -7,6 +7,7 @@ import Solucoes from "./components/Solucoes/Solucoes"
 import Depoimentos from "./components/Depoimentos/Depoimentos"
 import Cta from "./components/Cta/Cta"
 import Footer from "./components/Footer/Footer"
+import WhatsappButton from "./components/WhatsappButton/WhatsappButton"
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
      <Depoimentos/>
      <Cta/>
      <Footer/>
+     <WhatsappButton />
     </div>
   )
 }

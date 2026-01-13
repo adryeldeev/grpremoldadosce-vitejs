@@ -10,7 +10,8 @@ const Produtos = () => {
       name: 'Blocos de Concreto',
       description: 'Blocos estruturais e de vedação em diversas medidas. Alta resistência e durabilidade para sua obra.',
       image: bloco,
-      sizes: ['9x19x39cm', '14x19x39cm'],
+      sizes: ['9x19x39cm', '14x19x39cm', '19x19x39cm'],
+
       whatsappMessage: 'Olá, estou interessado em Blocos de Concreto. Gostaria de mais informações.',
     },
     {
@@ -40,7 +41,7 @@ const Produtos = () => {
   ]
 
   const handleWhatsAppClick = (message: string) => {
-    const phoneNumber = '5585999999999' // Substitua pelo número de WhatsApp
+    const phoneNumber = '5585999289524' // Substitua pelo número de WhatsApp
     const encodedMessage = encodeURIComponent(message)
     window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank')
   }
@@ -88,7 +89,7 @@ const Produtos = () => {
               
               <button 
                 onClick={() => handleWhatsAppClick(product.whatsappMessage)}
-                className='w-full py-3 px-6 text-white rounded-lg font-semibold flex items-center justify-center gap-2 hover:opacity-90 transition-opacity cursor-pointer' 
+                className='w-full py-3 px-6 text-white rounded-lg font-semibold flex items-center justify-center gap-2 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 cursor-pointer' 
                 style={{backgroundColor: '#1E40AF'}}
               >
                 Solicitar Orçamento →
