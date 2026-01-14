@@ -1,7 +1,7 @@
 import React from 'react';
 
 const WhatsappButton: React.FC = () => {
-  const phoneNumber = '5585999289524'; // Altere para o número da empresa
+  const phoneNumber = '558599289524'; // Altere para o número da empresa
   const message = 'Olá! Gostaria de mais informações.';
   
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;

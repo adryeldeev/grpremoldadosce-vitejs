@@ -41,7 +41,7 @@ const Produtos = () => {
   ]
 
   const handleWhatsAppClick = (message: string) => {
-    const phoneNumber = '5585999289524' // Substitua pelo número de WhatsApp
+    const phoneNumber = '558599289524' // Substitua pelo número de WhatsApp
     const encodedMessage = encodeURIComponent(message)
     window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank')
   }
