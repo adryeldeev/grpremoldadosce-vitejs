@@ -1,6 +1,6 @@
 import imgHero from '../../assets/unsplash_lY_1_64r5Bo.png';
 const Hero = () => {
-  const numberWhatsapp = '558599289524'; // Substitua pelo número de WhatsApp desejado
+  const numberWhatsapp = '55859289524'; // Substitua pelo número de WhatsApp desejado
 
   const handleWhatsAppClick = () => {
     const message = 'Olá! Gostaria de solicitar um orçamento.'
