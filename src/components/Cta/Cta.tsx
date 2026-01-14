@@ -10,7 +10,7 @@ const Cta = () => {
   ]
 
   const handleWhatsAppClick = () => {
-    const phoneNumber = '55859289524' // Substitua pelo número real
+    const phoneNumber = '558592895924' // Substitua pelo número real
     const message = 'Olá! Gostaria de solicitar um orçamento.'
     const encodedMessage = encodeURIComponent(message)
     window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank')
