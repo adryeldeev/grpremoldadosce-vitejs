@@ -1,0 +1,28 @@
+# robots.txt para GR Pré Moldados
+# Permite que todos os bots de busca indexem o site
+
+User-agent: *
+Allow: /
+
+# Bloquear acesso a arquivos de configuração e temporários
+Disallow: /api/
+Disallow: /*.json$
+
+# Sitemap
+Sitemap: https://www.grpremoldadosce.com.br/sitemap.xml
+
+# Bots específicos
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Crawl delay para prevenir sobrecarga
+Crawl-delay: 1
