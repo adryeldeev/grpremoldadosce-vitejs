@@ -5,7 +5,7 @@ export const seoConfig = {
   siteName: 'GR Pré Moldados',
   siteUrl: 'https://www.grpremoldadosce.com.br',
   defaultTitle: 'GR Pré Moldados Fortaleza - Blocos, Canaletas e Pré-Moldados CE',
-  defaultDescription: 'GR Pré Moldados em Fortaleza-CE: Fabricante de blocos de concreto, canaletas e pré-moldados com 15+ anos de experiência. Qualidade superior para sua obra. Solicite orçamento!',
+  defaultDescription: 'GR Pré Moldados em Fortaleza-CE: Representante de fábricas de blocos de concreto, canaletas e pré-moldados. Conectamos sua obra aos melhores produtos certificados. Solicite orçamento!',
   defaultKeywords: 'pré moldados fortaleza, blocos de concreto fortaleza, canaletas fortaleza, materiais de construção fortaleza, blocos estruturais ceará',
   social: {
     instagram: '@grpremoldados',

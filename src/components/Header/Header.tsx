@@ -37,8 +37,8 @@ const Header = () => {
            <ul className='flex flex-col gap-4'>
              <li><a href="#inicio" className='hover:text-[#1E40AF] block' onClick={toggleMobileMenu}>Início</a></li>
              <li><a href="#sobre" className='hover:text-[#1E40AF] block' onClick={toggleMobileMenu}>Sobre</a></li>
-             <li><a href="#depoimentos" className='hover:text-[#1E40AF] block' onClick={toggleMobileMenu}>Depoimentos</a></li>
              <li><a href="#produtos" className='hover:text-[#1E40AF] block' onClick={toggleMobileMenu}>Produtos</a></li>
+             <li><a href="#depoimentos" className='hover:text-[#1E40AF] block' onClick={toggleMobileMenu}>Depoimentos</a></li>
              <li><a href="#contato" className='hover:text-[#1E40AF] block' onClick={toggleMobileMenu}>Contato</a></li>
            </ul>
            <button className='w-full mt-4 py-4 px-8 text-white rounded-lg cursor-pointer' style={{backgroundColor: '#1E40AF'}}>Orçamento</button>

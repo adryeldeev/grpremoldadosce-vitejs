@@ -50,10 +50,10 @@ const Produtos = () => {
     <section className='py-16 px-4' id='produtos'>
       <div className='text-center mb-12'>
         <h2 className='text-4xl font-bold mb-4'>
-          Nossos <span style={{color: '#1E40AF'}}>Produtos</span>
+          Produtos que <span style={{color: '#1E40AF'}}>Fornecemos</span>
         </h2>
         <p className='text-gray-600 max-w-3xl mx-auto'>
-          Linha completa de pré-moldados para sua obra
+          Linha completa de pré-moldados das melhores fábricas da região
         </p>
       </div>
 

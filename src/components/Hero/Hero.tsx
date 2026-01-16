@@ -10,7 +10,7 @@ const Hero = () => {
   return (
     <>
     <section 
-      className='relative h-[550px] flex items-center justify-center px-12 animate-on-scroll' id='inicio'
+      className='relative h-116 md:h-[550px] flex items-center justify-center px-12 animate-on-scroll' id='inicio'
       style={{
         backgroundImage: `url(${imgHero})`,
         backgroundSize: 'cover',
@@ -19,11 +19,11 @@ const Hero = () => {
       }}
     >
         <div className='max-w-xl text-center'>
-            <h1 className='text-2xl md:text-5xl font-bold mb-6 text-white'>
-              Materiais de Construção de <span className='bg-gradient-to-r from-blue-900 via-blue-700 to-blue-600 text-transparent bg-clip-text drop-shadow-[0_0_15px_rgba(59,130,246,0.5)]'>Alta Qualidade</span>
+            <h1 className='text-2xl md:text-4xl font-bold mb-6 text-white'>
+              Fornecimento de Pré-Moldados de <span className='bg-[#1E40AF] text-transparent bg-clip-text '>Alta Qualidade</span>
             </h1>
             <p className='text-white mb-4 md:mb-6 md:text-lg'>
-              Blocos, canaletas e pré-moldados para sua obra com excelência e durabilidade.
+              Conectamos sua obra às melhores fábricas de pré-moldados da região.
             </p>
             <button onClick={handleWhatsAppClick} className='py-4 px-8 text-white rounded-lg cursor-pointer hover:-translate-y-1 hover:shadow-lg transition-all duration-300 flex items-center gap-2 mx-auto' style={{backgroundColor: '#1E40AF'}}>
               Solicitar Orçamento →
@@ -33,8 +33,8 @@ const Hero = () => {
 
     <section className='flex flex-col md:flex-row md:justify-between items-start  gap-8 px-12  mx-auto bg-[#F9FAFB] py-8 rounded-lg  '>
         <div>
-            <h2 className='text-2xl  md:text-4xl font-bold' style={{color: '#1E40AF'}}>15+</h2>
-            <p className='text-gray-600'>Anos de Experiência</p>
+            <h2 className='text-2xl  md:text-4xl font-bold' style={{color: '#1E40AF'}}>Fábricas</h2>
+            <p className='text-gray-600'>Parceiras Certificadas</p>
         </div>
         <div>
             <h2 className='text-2xl  md:text-4xl font-bold' style={{color: '#1E40AF'}}>500+</h2>
@@ -42,11 +42,11 @@ const Hero = () => {
         </div>
         <div>
             <h2 className='text-2xl  md:text-4xl font-bold' style={{color: '#1E40AF'}}>100%</h2>
-            <p className='text-gray-600'>controle de qualidade</p>
+            <p className='text-gray-600'>Produtos Certificados</p>
         </div>
         <div>
-            <h2 className='text-2xl  md:text-4xl font-bold' style={{color: '#1E40AF'}}>Produção própria</h2>
-            <p className='text-gray-600'>Padrão industrial e controle de qualidade</p>
+            <h2 className='text-2xl  md:text-4xl font-bold' style={{color: '#1E40AF'}}>Melhor Preço</h2>
+            <p className='text-gray-600'>Direto das fábricas</p>
         </div>
     </section>
     </>

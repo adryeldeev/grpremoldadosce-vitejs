@@ -22,8 +22,8 @@ const PQEscolherGR = () => {
     },
     {
       id: 4,
-      title: 'Equipe Especializada',
-      description: 'Profissionais capacitados para seu projeto.',
+      title: 'Fábricas Especializadas',
+      description: 'Parcerias com fábricas certificadas e experientes.',
       Icon: Users,
     },
     {
