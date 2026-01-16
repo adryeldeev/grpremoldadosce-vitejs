@@ -9,8 +9,10 @@ declare global {
 }
 
 export const GA_TRACKING_ID = 'G-XWPR7DKZZR';
+export const GOOGLE_ADS_ID = 'AW-17873278222';
+export const GOOGLE_ADS_CONVERSION_LABEL = 'YYYYYYYYYY'; // Substitua pelo label quando criar as conversões
 
-// Inicializar Google Analytics
+// Inicializar Google Analytics e Google Ads
 export const initGA = () => {
   if (typeof window !== 'undefined') {
     const script1 = document.createElement('script');
@@ -26,6 +28,7 @@ export const initGA = () => {
       gtag('config', '${GA_TRACKING_ID}', {
         page_path: window.location.pathname,
       });
+      gtag('config', '${GOOGLE_ADS_ID}');
     `;
     document.head.appendChild(script2);
   }
@@ -95,4 +98,44 @@ export const trackSectionView = (sectionName: string) => {
     category: 'Section',
     label: sectionName,
   });
+};
+
+// Google Ads Conversion Tracking
+export const trackConversion = (conversionLabel?: string) => {
+  if (typeof window.gtag !== 'undefined') {
+    window.gtag('event', 'conversion', {
+      send_to: `${GOOGLE_ADS_ID}/${conversionLabel || GOOGLE_ADS_CONVERSION_LABEL}`,
+    });
+  }
+};
+
+// Rastrear conversão de orçamento (lead)
+export const trackOrcamentoConversion = () => {
+  trackConversion();
+  trackOrcamentoRequest();
+};
+
+// Rastrear clique no WhatsApp como conversão
+export const trackWhatsAppConversion = () => {
+  trackWhatsAppClick();
+  // Você pode criar uma conversão específica para WhatsApp se desejar
+  if (typeof window.gtag !== 'undefined') {
+    window.gtag('event', 'conversion', {
+      send_to: `${GOOGLE_ADS_ID}/whatsapp_click`,
+      value: 1.0,
+      currency: 'BRL',
+    });
+  }
+};
+
+// Rastrear clique no telefone como conversão
+export const trackPhoneConversion = () => {
+  trackPhoneClick();
+  if (typeof window.gtag !== 'undefined') {
+    window.gtag('event', 'conversion', {
+      send_to: `${GOOGLE_ADS_ID}/phone_click`,
+      value: 1.0,
+      currency: 'BRL',
+    });
+  }
 };
