@@ -43,7 +43,14 @@ const Produtos = () => {
   const handleWhatsAppClick = (message: string) => {
     const phoneNumber = '558592895924' // Substitua pelo número de WhatsApp
     const encodedMessage = encodeURIComponent(message)
-    window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank')
+    const url = `https://wa.me/${phoneNumber}?text=${encodedMessage}`
+    
+    // Rastrear conversão do Google Ads
+    if (typeof (window as any).gtag_report_conversion === 'function') {
+      (window as any).gtag_report_conversion(url)
+    } else {
+      window.open(url, '_blank')
+    }
   }
 
   return (
