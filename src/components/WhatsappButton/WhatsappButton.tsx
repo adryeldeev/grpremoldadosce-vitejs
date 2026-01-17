@@ -5,10 +5,22 @@ const WhatsappButton: React.FC = () => {
   const message = 'Olá! Gostaria de mais informações.';
   
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+  
+  const handleClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    
+    // Rastrear conversão do Google Ads
+    if (typeof (window as any).gtag_report_conversion === 'function') {
+      (window as any).gtag_report_conversion(whatsappUrl);
+    } else {
+      window.open(whatsappUrl, '_blank');
+    }
+  };
 
   return (
     <a
       href={whatsappUrl}
+      onClick={handleClick}
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-lg transition-all duration-300 hover:scale-110 group"

@@ -12,6 +12,20 @@
       gtag('js', new Date());
 
       gtag('config', 'AW-17873278222');
+      
+      // Event snippet for Solicitar cotação conversion page
+      function gtag_report_conversion(url) {
+        var callback = function () {
+          if (typeof(url) != 'undefined') {
+            window.location = url;
+          }
+        };
+        gtag('event', 'conversion', {
+            'send_to': 'AW-17873278222/yBVHCLHb_uYbEI6q0spC',
+            'event_callback': callback
+        });
+        return false;
+      }
     </script>
     
     <!-- Primary Meta Tags -->
