@@ -41,13 +41,16 @@ const PQEscolherGR = () => {
   ]
 
   return (
-    <section className='mt-32 py-16 px-4' style={{backgroundColor: '#f8f9fa'}}>
-      <div className='text-center mb-12'>
-        <h2 className='text-4xl font-bold mb-4'>
-          Por que escolher a <span style={{color: '#1E40AF'}}>GR Pré Moldados</span>?
+    <section className='py-16 sm:py-20 px-4 bg-white'>
+      <div className='text-center mb-12 sm:mb-16'>
+        <span className='inline-block px-4 py-2 bg-[#1E40AF]/10 text-[#1E40AF] rounded-md font-semibold text-sm mb-4'>
+          NOSSOS DIFERENCIAIS
+        </span>
+        <h2 className='text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 mb-4'>
+          Por que escolher a <span className='text-[#1E40AF]'>GR Pré Moldados</span>?
         </h2>
-        <p className='text-gray-600 max-w-3xl mx-auto'>
-          A escolha certa para sua obra
+        <p className='text-lg text-slate-600 max-w-2xl mx-auto'>
+          Excelência e confiança em cada etapa do seu projeto
         </p>
       </div>
 
@@ -57,13 +60,13 @@ const PQEscolherGR = () => {
           return (
             <div 
               key={reason.id}
-              className='bg-white p-8 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col items-center text-center'
+              className='bg-white p-8 rounded-lg border border-slate-200 shadow-sm hover:shadow-xl hover:scale-105 hover:bg-[#1E40AF] hover:border-[#1E40AF] transition-all duration-300 group'
             >
-              <div className='w-16 h-16 mb-4 rounded-2xl flex items-center justify-center mx-auto' style={{backgroundColor: '#1E40AF'}}>
-                <Icon className='text-white' size={32} />
+              <div className='w-14 h-14 mb-5 rounded-lg bg-[#1E40AF]/10 group-hover:bg-white/20 flex items-center justify-center transition-colors duration-300'>
+                <Icon className='text-[#1E40AF] group-hover:text-white transition-colors duration-300' size={28} />
               </div>
-              <h3 className='text-xl font-bold mb-3 text-center'>{reason.title}</h3>
-              <p className='text-gray-600 text-center'>{reason.description}</p>
+              <h3 className='text-lg font-semibold text-slate-900 group-hover:text-white mb-2 transition-colors duration-300'>{reason.title}</h3>
+              <p className='text-slate-600 group-hover:text-white/90 text-sm leading-relaxed transition-colors duration-300'>{reason.description}</p>
             </div>
           )
         })}

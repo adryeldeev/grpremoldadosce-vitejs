@@ -1,10 +1,23 @@
-const Sobre = () => {
-  return (
-    <section className='mt-32 px-12 text-center' id='sobre'>
-        <h2 className='text-3xl md:text-4xl font-bold mb-6' >Sobre a <span style={{color: '#1E40AF'}}>GR Pré Moldados</span></h2>
-        <p className='text-gray-700 mb-4 md:mb-6 md:text-lg w-full max-w-3xl mx-auto'>Atuamos como representantes e intermediadores de fábricas parceiras de pré-moldados em Fortaleza. Conectamos sua obra aos melhores produtos com qualidade certificada.</p>
-    </section>
-  )
-}
+const Stats = () => {
+  const features = [
+    { label: "Anos de Mercado", value: "10+" },
+    { label: "Obras Atendidas", value: "500+" },
+    { label: "Norma Técnica", value: "ABNT" },
+    { label: "Entrega Própria", value: "100%" },
+  ];
 
-export default Sobre
+  return (
+    <section className="bg-slate-900 py-24 px-6">
+      <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+        {features.map((item, idx) => (
+          <div key={idx}>
+            <div className="text-4xl md:text-5xl font-bold text-white mb-2">{item.value}</div>
+            <div className="text-[#1E40AF] text-sm font-semibold uppercase tracking-wide">{item.label}</div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+};
+
+export default Stats;

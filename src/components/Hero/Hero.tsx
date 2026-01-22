@@ -1,63 +1,68 @@
-import imgHero from '../../assets/unsplash_lY_1_64r5Bo.png';
-const Hero = () => {
-  const numberWhatsapp = '558592895924'; // Substitua pelo número de WhatsApp desejado
+import fotoHero from '../../assets/fotoHero-GRPremoldados.png';
 
-  const handleWhatsAppClick = () => {
-    const message = 'Olá! Gostaria de solicitar um orçamento.'
-    const encodedMessage = encodeURIComponent(message)
-    const url = `https://wa.me/${numberWhatsapp}?text=${encodedMessage}`
-    
-    // Rastrear conversão do Google Ads
-    if (typeof (window as any).gtag_report_conversion === 'function') {
-      (window as any).gtag_report_conversion(url)
-    } else {
-      window.open(url, '_blank')
+const Hero = () => {
+  const phoneNumber = '558592895924';
+  const message = 'Olá! Gostaria de solicitar um atendimento.';
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+  const handleCatalogoClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const produtosSection = document.getElementById('produtos');
+    if (produtosSection) {
+      produtosSection.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
+  const handleAtendimentoClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    
+    if (typeof (window as any).gtag_report_conversion === 'function') {
+      (window as any).gtag_report_conversion(whatsappUrl);
+    } else {
+      window.open(whatsappUrl, '_blank');
+    }
+  };
+
   return (
-    <>
-    <section 
-      className='relative h-116 md:h-[550px] flex items-center justify-center px-12 animate-on-scroll' id='inicio'
-      style={{
-        backgroundImage: `url(${imgHero})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-      }}
-    >
-        <div className='max-w-xl text-center'>
-            <h1 className='text-2xl md:text-4xl font-bold mb-6 text-white'>
-              Fornecimento de Pré-Moldados de <span className='bg-[#1E40AF] text-transparent bg-clip-text '>Alta Qualidade</span>
-            </h1>
-            <p className='text-white mb-4 md:mb-6 md:text-lg'>
-              Conectamos sua obra às melhores fábricas de pré-moldados da região.
-            </p>
-            <button onClick={handleWhatsAppClick} className='py-4 px-8 text-white rounded-lg cursor-pointer hover:-translate-y-1 hover:shadow-lg transition-all duration-300 flex items-center gap-2 mx-auto' style={{backgroundColor: '#1E40AF'}}>
-              Solicitar Orçamento →
+    <section className="relative bg-white pt-8 sm:pt-16 pb-16 sm:pb-32 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+        <div>
+          <span className="inline-block py-2 px-4 rounded-md bg-[#1E40AF]/10 text-[#1E40AF] text-xs font-semibold uppercase tracking-wide mb-4 sm:mb-6">
+            Líder em Pré-moldados no Ceará
+          </span>
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold text-slate-900 leading-tight mb-6 sm:mb-8">
+            A base sólida para a sua <span className="text-[#1E40AF]">obra bruta.</span>
+          </h1>
+          <p className="text-base sm:text-lg text-slate-600 mb-8 sm:mb-10 leading-relaxed max-w-lg">
+            Fornecemos blocos, intertravados e meios-fios com rigor técnico e entrega pontual para grandes empreendimentos.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <button 
+              onClick={handleCatalogoClick}
+              className="bg-[#1E40AF] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#1E3A8A] transition shadow-lg cursor-pointer"
+            >
+              Ver Nossos Produtos
             </button>
+            <button 
+              onClick={handleAtendimentoClick}
+              className="border-2 border-slate-300 text-slate-700 px-8 py-4 rounded-lg font-semibold hover:bg-slate-50 transition cursor-pointer"
+            >
+              Solicitar Atendimento
+            </button>
+          </div>
         </div>
+        
+        <div className="relative mt-8 md:mt-0">
+          <div className="absolute -inset-4 bg-[#1E40AF]/10 rounded-3xl -rotate-3"></div>
+          <img 
+            src={fotoHero} 
+            alt="Obra de Engenharia" 
+            className="relative rounded-2xl shadow-2xl object-cover w-full h-[300px] sm:h-[400px] md:h-[500px]"
+          />
+        </div>
+      </div>
     </section>
+  );
+};
 
-    <section className='flex flex-col md:flex-row md:justify-between items-start  gap-8 px-12  mx-auto bg-[#F9FAFB] py-8 rounded-lg  '>
-        <div>
-            <h2 className='text-2xl  md:text-4xl font-bold' style={{color: '#1E40AF'}}>Fábricas</h2>
-            <p className='text-gray-600'>Parceiras Certificadas</p>
-        </div>
-        <div>
-            <h2 className='text-2xl  md:text-4xl font-bold' style={{color: '#1E40AF'}}>500+</h2>
-            <p className='text-gray-600'>Obras Atendidas</p>
-        </div>
-        <div>
-            <h2 className='text-2xl  md:text-4xl font-bold' style={{color: '#1E40AF'}}>100%</h2>
-            <p className='text-gray-600'>Produtos Certificados</p>
-        </div>
-        <div>
-            <h2 className='text-2xl  md:text-4xl font-bold' style={{color: '#1E40AF'}}>Melhor Preço</h2>
-            <p className='text-gray-600'>Direto das fábricas</p>
-        </div>
-    </section>
-    </>
-  )
-}
-
-export default Hero
+export default Hero;

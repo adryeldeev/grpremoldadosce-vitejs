@@ -1,54 +1,84 @@
-import { useState } from 'react';
-import logo from '../../assets/logoGR.png'
-const Header = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
- 
+import React, { useState } from 'react';
+import { Menu, X } from 'lucide-react';
+import logoGR from '../../assets/logoGR.png';
 
-  const toggleMobileMenu = () => {
-    setMobileMenuOpen(!mobileMenuOpen);
+const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const phoneNumber = '558592895924';
+  const message = 'Olá! Gostaria de solicitar um orçamento.';
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+  const handleCTAClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    
+    // Rastrear conversão do Google Ads
+    if (typeof (window as any).gtag_report_conversion === 'function') {
+      (window as any).gtag_report_conversion(whatsappUrl);
+    } else {
+      window.open(whatsappUrl, '_blank');
+    }
   };
 
   return (
-    <nav className='sticky top-0 flex justify-between items-center p-4 md:p-4 w-full bg-white z-50 shadow-md'>
-        <img src={logo} alt="Logo" className='h-16' />
-       
-       {/* Desktop Menu */}
-       <ul className='hidden md:flex justify-between w-2/5 items-center'>
-        <li><a href="#inicio" className='hover:text-[#1E40AF]'>Início</a></li>
-        <li><a href="#sobre" className='hover:text-[#1E40AF]'>Sobre</a></li>
-        <li><a href="#produtos" className='hover:text-[#1E40AF]'>Produtos</a></li>
-        <li><a href="#depoimentos" className='hover:text-[#1E40AF]'>Depoimento</a></li>
-        <li><a href="#contato" className='hover:text-[#1E40AF]'>Contato</a></li>
-       </ul>
-       <button className='hidden md:block py-4 px-8 text-white rounded-lg cursor-pointer' style={{backgroundColor: '#1E40AF'}}><a href="#contato">
-        Orçamento</a></button>
-       {/* Mobile Menu Button */}
-       <button 
-         className='md:hidden text-3xl cursor-pointer' 
-         onClick={toggleMobileMenu}
-         aria-label="Toggle menu"
-       >
-         {mobileMenuOpen ? '✕' : '☰'}
-       </button>
-       
-       {/* Mobile Menu */}
-       {mobileMenuOpen && (
-         <div className='absolute top-20 left-0 right-0 bg-white shadow-lg rounded-lg p-6 md:hidden z-50'>
-           <ul className='flex flex-col gap-4'>
-             <li><a href="#inicio" className='hover:text-[#1E40AF] block' onClick={toggleMobileMenu}>Início</a></li>
-             <li><a href="#sobre" className='hover:text-[#1E40AF] block' onClick={toggleMobileMenu}>Sobre</a></li>
-             <li><a href="#produtos" className='hover:text-[#1E40AF] block' onClick={toggleMobileMenu}>Produtos</a></li>
-             <li><a href="#depoimentos" className='hover:text-[#1E40AF] block' onClick={toggleMobileMenu}>Depoimentos</a></li>
-             <li><a href="#contato" className='hover:text-[#1E40AF] block' onClick={toggleMobileMenu}>Contato</a></li>
-           </ul>
-           <button className='w-full mt-4 py-4 px-8 text-white rounded-lg cursor-pointer' style={{backgroundColor: '#1E40AF'}}>Orçamento</button>
-         </div>
-       )}
+    <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+        <div className="flex items-center gap-3">
+          <img src={logoGR} alt="GR Pré Moldados" className="h-12 w-auto" />
+        </div>
+        
+        {/* Desktop Menu */}
+        <div className="hidden md:flex space-x-8 text-sm font-semibold text-slate-700">
+          <a href="#" className="hover:text-[#1E40AF] transition">Início</a>
+          <a href="#produtos" className="hover:text-[#1E40AF] transition">Produtos</a>
+          <a href="#solucoes" className="hover:text-[#1E40AF] transition">Soluções</a>
+          <a href="#depoimentos" className="hover:text-[#1E40AF] transition">Depoimentos</a>
+        </div>
+
+        {/* Desktop CTA Button */}
+        <button 
+          onClick={handleCTAClick}
+          className="hidden md:block bg-[#1E40AF] text-white px-6 py-3 rounded-lg text-xs font-bold uppercase tracking-wide hover:bg-[#1E3A8A] transition-all shadow-md cursor-pointer"
+        >
+          Orçamento Rápido
+        </button>
+
+        {/* Mobile Menu Button */}
+        <button 
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          className="md:hidden p-2 text-slate-900 hover:text-[#1E40AF] transition"
+        >
+          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
+      </div>
+
+      {/* Mobile Menu */}
+      {isMenuOpen && (
+        <div className="md:hidden bg-white border-t border-slate-200">
+          <div className="px-4 py-6 space-y-4">
+            <a href="#" className="block text-sm font-semibold text-slate-700 hover:text-[#1E40AF] transition">
+              Início
+            </a>
+            <a href="#produtos" className="block text-sm font-semibold text-slate-700 hover:text-[#1E40AF] transition">
+              Produtos
+            </a>
+            <a href="#solucoes" className="block text-sm font-semibold text-slate-700 hover:text-[#1E40AF] transition">
+              Soluções
+            </a>
+            <a href="#depoimentos" className="block text-sm font-semibold text-slate-700 hover:text-[#1E40AF] transition">
+              Depoimentos
+            </a>
+            <button 
+              onClick={handleCTAClick}
+              className="w-full bg-[#1E40AF] text-white px-6 py-3 rounded-lg text-xs font-bold uppercase tracking-wide hover:bg-[#1E3A8A] transition-all cursor-pointer"
+            >
+              Orçamento Rápido
+            </button>
+          </div>
+        </div>
+      )}
     </nav>
+  );
+};
 
-
-    
-  )
-}
-
-export default Header
+export default Header;

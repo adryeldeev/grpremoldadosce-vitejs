@@ -1,30 +1,35 @@
-import Header from "./components/Header/Header"
-import Hero from "./components/Hero/Hero"
-import Sobre from "./components/Sobre/Sobre"
-import PQEscolherGR from "./components/PQEscolherGR/PQEscolherGR"
-import Produtos from "./components/Produtos/Produtos"
-import Solucoes from "./components/Solucoes/Solucoes"
-import Depoimentos from "./components/Depoimentos/Depoimentos"
-import Cta from "./components/Cta/Cta"
-import Footer from "./components/Footer/Footer"
-import WhatsappButton from "./components/WhatsappButton/WhatsappButton"
+import CTASection from "./components/Cta/Cta";
+import Footer from "./components/Footer/Footer";
+import Header from "./components/Header/Header";
+import Hero from "./components/Hero/Hero";
+import ProductsSection from "./components/Produtos/Produtos";
+import Stats from "./components/Sobre/Sobre";
+import SEO from "./components/SEO/SEO";
+import PQEscolherGR from "./components/PQEscolherGR/PQEscolherGR";
+import ComoFunciona from "./components/ComoFunciona/ComoFunciona";
+import Depoimentos from "./components/Depoimentos/Depoimentos";
+import WhatsappButton from "./components/WhatsappButton/WhatsappButton";
+import { seoConfig } from "./config/seo";
 
-function App() {
-
+export default function Home() {
   return (
-    <div className="">
-     <Header />
-     <Hero />
-     <Sobre/>
-     <PQEscolherGR/>
-     <Produtos/>
-     <Solucoes/>
-     <Depoimentos/>
-     <Cta/>
-     <Footer/>
-     <WhatsappButton />
-    </div>
-  )
+    <main className="antialiased font-sans">
+      <SEO 
+        title={seoConfig.defaultTitle}
+        description={seoConfig.defaultDescription}
+        keywords={seoConfig.defaultKeywords}
+        url={seoConfig.siteUrl}
+      />
+      <Header />
+      <Hero />
+      <Stats />
+      <ProductsSection /> 
+      <ComoFunciona />
+      <PQEscolherGR />
+      <Depoimentos />
+      <CTASection />
+      <Footer />
+      <WhatsappButton />
+    </main>
+  );
 }
-
-export default App
