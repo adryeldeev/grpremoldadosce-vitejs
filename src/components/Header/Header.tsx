@@ -31,7 +31,7 @@ const Header = () => {
         <div className="hidden md:flex space-x-8 text-sm font-semibold text-slate-700">
           <a href="#" className="hover:text-[#1E40AF] transition">Início</a>
           <a href="#produtos" className="hover:text-[#1E40AF] transition">Produtos</a>
-          <a href="#solucoes" className="hover:text-[#1E40AF] transition">Soluções</a>
+          <a href="#como-funciona" className="hover:text-[#1E40AF] transition">Como Funciona</a>
           <a href="#depoimentos" className="hover:text-[#1E40AF] transition">Depoimentos</a>
         </div>
 
@@ -62,8 +62,8 @@ const Header = () => {
             <a href="#produtos" className="block text-sm font-semibold text-slate-700 hover:text-[#1E40AF] transition">
               Produtos
             </a>
-            <a href="#solucoes" className="block text-sm font-semibold text-slate-700 hover:text-[#1E40AF] transition">
-              Soluções
+            <a href="#como-funciona" className="block text-sm font-semibold text-slate-700 hover:text-[#1E40AF] transition">
+              Como Funciona
             </a>
             <a href="#depoimentos" className="block text-sm font-semibold text-slate-700 hover:text-[#1E40AF] transition">
               Depoimentos
